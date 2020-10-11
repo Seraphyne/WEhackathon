@@ -15,7 +15,14 @@ const Stack = createStackNavigator();
 export default function App() {
     return (
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#aaaaaa",
+            },
+            headerTintColor: "#fff",
+          }}
+        >
           <Stack.Screen name="Welcome" component={WelcomeScreen} />
           <Stack.Screen name="Register" component={RegisterScreen} />
           <Stack.Screen name="Mentor/Mentee" component={MentorMentee} />

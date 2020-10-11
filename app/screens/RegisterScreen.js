@@ -74,7 +74,7 @@ function RegisterScreen({ navigation }) {
 const styles = StyleSheet.create({
   title: {
     margin: 24,
-    marginTop: 24,
+    marginTop: 150,
     fontSize: 36,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
   },
   input: {
     paddingBottom: 24,
+    fontSize: 18,
   },
   button: {
         backgroundColor: "#ffdbdc",

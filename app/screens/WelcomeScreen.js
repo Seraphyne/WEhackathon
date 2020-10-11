@@ -11,6 +11,7 @@ function WelcomeScreen({ navigation }) {
         <View style={styles.container}>
         <Image source={require('../assets/logo.jpg')} style={styles.logo}/>
         <Text style={{marginBottom: 100}}>MentorMash</Text>
+        <Text style={{margin: 30, fontStyle: "italic"}}>Find the right mentor for you</Text>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate("Register")}

@@ -77,9 +77,9 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     borderWidth: 1,
     borderColor: '#ACACAC',
-    alignItems: 'center', // To center the checked circle…
+    alignItems: 'center',
     justifyContent: 'center',
-},
+  },
   checkedCircle: {
     width: 22,
     height: 22,

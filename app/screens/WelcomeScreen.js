@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import RegisterScreen from './RegisterScreen';
 
 function WelcomeScreen({ navigation }) {
+  
     return (
         <View style={styles.container}>
         <Image source={require('../assets/logo.jpg')} style={styles.logo}/>

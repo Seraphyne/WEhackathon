@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 function RegisterScreen({ navigation }) {
     const [state, setState] = useState({
@@ -40,7 +38,6 @@ function RegisterScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Your email"
-            //maxLength={20}
             name="email"
             autoCapitalize = "none"
             onChangeText = {handleEmail}
@@ -48,7 +45,6 @@ function RegisterScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Your name"
-            //maxLength={20}
             name="name"
             onChangeText = {handleName}
           />
@@ -56,7 +52,6 @@ function RegisterScreen({ navigation }) {
             secureTextEntry={true}
             style={styles.input}
             placeholder="Your password"
-            //maxLength={20}
             name="password"
             autoCapitalize = "none"
             onChangeText = {handlePassword}
@@ -72,7 +67,7 @@ function RegisterScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  title: {
+title: {
     margin: 24,
     marginTop: 150,
     fontSize: 36,
@@ -88,14 +83,14 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
     fontSize: 18,
   },
-  button: {
-        backgroundColor: "#ffdbdc",
-        alignItems: "center",
-        width: 300,
-        padding: 15,
-        marginBottom: 40,
-        borderRadius: 15,
-      },    
+ button: {
+    backgroundColor: "#ffdbdc",
+    alignItems: "center",
+    width: 300,
+    padding: 15,
+    marginBottom: 40,
+    borderRadius: 15,
+    },    
 })
 
 export default RegisterScreen;

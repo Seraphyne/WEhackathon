@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Text, View, StyleSheet, TouchableOpacity, Alert, Dimensions} from 'react-native';
-import { RadioButton } from 'react-native-paper';
 
-export default function MentorMentee()
+export default function MentorMentee({ navigation })
 {
   const [state, setState] = useState({
     isMentor: false,
@@ -22,6 +21,8 @@ export default function MentorMentee()
 
   return(
     <View style={styles.container}>
+      <Text style={styles.title}>Sign Up Now!</Text>
+      <Text>By signing up to be a mentor, you will do your part in helping the next generation of women entrepreneurs and leaders!</Text>
       <Text style={styles.text}>I want to be a mentor</Text>
       <TouchableOpacity 
         style={styles.circle}
@@ -31,7 +32,8 @@ export default function MentorMentee()
       >
       {state.isMentor ? (<View style={styles.checkedCircle} />) : (<View />)}
       </TouchableOpacity>
-      
+
+      <Text style={{marginTop: 40}}>By signing up to be a mentee, you will gain access to invaluable resources to help you jumpstart your career as a woman entrepreneur!</Text>
       <Text style={styles.text}>I want to be a mentee</Text>
       <TouchableOpacity 
         style={styles.circle}
@@ -39,41 +41,57 @@ export default function MentorMentee()
       >
       {state.isMentee ? (<View style={styles.checkedCircle} />) : (<View />)}
       </TouchableOpacity>  
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("Search")}
+      >
+        <Text style={{color: "#fff"}}>Submit</Text>
+      </TouchableOpacity>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+  title: {
+    color: '#3A4664',
+    fontSize: 30,  
+    margin: 50,
+  },
   text: {
     margin: 24,
-    marginTop: 0,
     color: '#3A4664',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   container: {
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
-    backgroundColor: "#FFDBDC",
+    backgroundColor: "#ffdbdc",
     alignItems: 'center',
-    justifyContent: 'center',
     padding: 24,
   },
   circle: {
-    height: 20,
-    width: 20,
-    borderRadius: 10,
+    height: 30,
+    width: 30,
+    borderRadius: 100,
     borderWidth: 1,
     borderColor: '#ACACAC',
     alignItems: 'center', // To center the checked circle…
     justifyContent: 'center',
-    marginHorizontal: 10
 },
   checkedCircle: {
-    width: 14,
-    height: 14,
-    borderRadius: 7,
-    backgroundColor: '#131313' // You can set it default or with yours one…
-  }
+    width: 22,
+    height: 22,
+    borderRadius: 100,
+    backgroundColor: '#3A4664' 
+  },
+  button: {
+    backgroundColor: "#3A4664",
+    alignItems: "center",
+    width: 300,
+    padding: 15,
+    margin: 40,
+    borderRadius: 15,
+  },   
 });

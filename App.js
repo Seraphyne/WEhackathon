@@ -8,6 +8,7 @@ import RegisterScreen from './app/screens/RegisterScreen';
 import MentorMentee from './app/screens/MentorMentee';
 import LoginScreen from './app/screens/LoginScreen';
 import SearchScreen from './app/screens/SearchScreen';
+import InterestsScreen from './app/screens/InterestsScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name="Mentor/Mentee" component={MentorMentee} />
           <Stack.Screen name="Log In" component={LoginScreen} />
           <Stack.Screen name="Search" component={SearchScreen} />
+          <Stack.Screen name="Select Interests" component={InterestsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
